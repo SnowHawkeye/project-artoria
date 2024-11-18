@@ -3,5 +3,4 @@
 [ext_resource type="PackedScene" uid="uid://di27fwbie5kx1" path="res://scenes/square.tscn" id="1_xhj4o"]
 
 [node name="WhiteSquare" instance=ExtResource("1_xhj4o")]
-visible = true
 color = Color(0.941176, 0.85098, 0.709804, 1)
