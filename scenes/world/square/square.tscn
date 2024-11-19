@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://di27fwbie5kx1"]
 
-[ext_resource type="Script" path="res://scripts/square.gd" id="1_ryaon"]
+[ext_resource type="Script" path="res://scripts/world/square/square.gd" id="1_t4o17"]
 
 [node name="Square" type="ColorRect"]
 custom_minimum_size = Vector2(32, 32)
@@ -9,4 +9,4 @@ offset_bottom = 32.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(1, 1, 1, 0)
-script = ExtResource("1_ryaon")
+script = ExtResource("1_t4o17")

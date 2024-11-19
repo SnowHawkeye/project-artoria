@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c1l1juwifv33l"]
 
-[ext_resource type="PackedScene" uid="uid://di27fwbie5kx1" path="res://scenes/square.tscn" id="1_xhj4o"]
+[ext_resource type="PackedScene" uid="uid://di27fwbie5kx1" path="res://scenes/world/square/square.tscn" id="1_xhj4o"]
 
 [node name="WhiteSquare" instance=ExtResource("1_xhj4o")]
 color = Color(0.941176, 0.85098, 0.709804, 1)

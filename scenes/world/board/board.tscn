@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://kowkmujedbxd"]
+
+[ext_resource type="Script" path="res://scripts/world/board/board.gd" id="1_sr227"]
+
+[node name="Board" type="GridContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -128.0
+offset_right = 128.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(128, 128)
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 8
+script = ExtResource("1_sr227")

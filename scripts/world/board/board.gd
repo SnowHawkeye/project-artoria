@@ -1,13 +1,13 @@
 extends GridContainer
 
 func _ready() -> void:
-	const BLACK_SQUARE = preload("res://scenes/black_square.tscn")
-	const WHITE_SQUARE = preload("res://scenes/white_square.tscn")
+	const BLACK_SQUARE = preload("res://scenes/world/square/black_square.tscn")
+	const WHITE_SQUARE = preload("res://scenes/world/square/white_square.tscn")
 	
 	print(BLACK_SQUARE)
 	
 	var array := []
-	var board_size = 9
+	var board_size = 8
 	
 	columns = board_size
 	for i in range(board_size):

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://kowkmujedbxd"]
 
-[ext_resource type="Script" path="res://scripts/board.gd" id="1_1dlw2"]
+[ext_resource type="Script" path="res://scripts/world/board/board.gd" id="1_sr227"]
 
 [node name="Board" type="GridContainer"]
 anchors_preset = 8
@@ -19,4 +19,4 @@ pivot_offset = Vector2(128, 128)
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 8
-script = ExtResource("1_1dlw2")
+script = ExtResource("1_sr227")
