@@ -1,0 +1,12 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0jbqo66pxwd4"]
+
+[ext_resource type="PackedScene" uid="uid://kowkmujedbxd" path="res://scenes/world/board/board.tscn" id="1_g77dg"]
+[ext_resource type="Script" path="res://scripts/world/board/checkered_board.gd" id="2_xsvu8"]
+[ext_resource type="PackedScene" uid="uid://c1l1juwifv33l" path="res://scenes/world/square/white_square.tscn" id="3_xsm13"]
+[ext_resource type="PackedScene" uid="uid://bnlojit16fy7n" path="res://scenes/world/square/black_square.tscn" id="4_1ls0k"]
+
+[node name="CheckeredBoard" instance=ExtResource("1_g77dg")]
+script = ExtResource("2_xsvu8")
+square_type_1 = ExtResource("3_xsm13")
+square_type_2 = ExtResource("4_1ls0k")
+square_size = 35

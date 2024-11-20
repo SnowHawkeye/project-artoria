@@ -1,31 +1,21 @@
-extends GridContainer
+class_name Board
+extends Control
+
+@export var board_dim_x := 8
+@export var board_dim_y := 8
+@export var square_size := 32 # px
+
+@onready var grid: GridContainer = $Grid
 
 func _ready() -> void:
-	const BLACK_SQUARE = preload("res://scenes/world/square/black_square.tscn")
-	const WHITE_SQUARE = preload("res://scenes/world/square/white_square.tscn")
-	
-	print(BLACK_SQUARE)
-	
-	var array := []
-	var board_size = 8
-	
-	columns = board_size
-	for i in range(board_size):
-		var row := []
-		for j in range(board_size):
-			var node
-			if (i%2==0 and j%2==0) or (i%2==1 and j%2==1) :
-				node = BLACK_SQUARE.instantiate()				
-			else:
-				node = WHITE_SQUARE.instantiate()
-			node.name = "(" + str(i) + "," + str(j) + ")"
-			row.append(node)
-		array.append(row)
-	make_board(array)
-
+	grid.custom_minimum_size = Vector2(board_dim_x * square_size, board_dim_y * square_size)
+	grid.columns = board_dim_x
 
 func make_board(squares):
 	for x in squares:
 		for y in x:
-			add_child(y)
-			
+			grid.add_child(y)
+	center_board()
+	
+func center_board():
+	grid.position = size / 2  # Center grid in the parent
