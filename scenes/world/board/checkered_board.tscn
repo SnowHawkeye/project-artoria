@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0jbqo66pxwd4"]
+[gd_scene load_steps=5 format=3 uid="uid://ea6a67p4nua2"]
 
 [ext_resource type="PackedScene" uid="uid://kowkmujedbxd" path="res://scenes/world/board/board.tscn" id="1_g77dg"]
 [ext_resource type="Script" path="res://scripts/world/board/checkered_board.gd" id="2_xsvu8"]
@@ -9,4 +9,3 @@
 script = ExtResource("2_xsvu8")
 square_type_1 = ExtResource("3_xsm13")
 square_type_2 = ExtResource("4_1ls0k")
-square_size = 35
