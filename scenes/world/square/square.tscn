@@ -2,11 +2,19 @@
 
 [ext_resource type="Script" path="res://scripts/world/square/square.gd" id="1_t4o17"]
 
-[node name="Square" type="ColorRect"]
+[node name="Square" type="Control"]
 custom_minimum_size = Vector2(32, 32)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_t4o17")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
 offset_right = 32.0
 offset_bottom = 32.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(1, 1, 1, 0)
-script = ExtResource("1_t4o17")

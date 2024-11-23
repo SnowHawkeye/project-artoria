@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbcq2byl5bhoh"]
+
+[ext_resource type="PackedScene" uid="uid://bug87wes4jax1" path="res://scenes/units/piece.tscn" id="1_srflh"]
+[ext_resource type="Texture2D" uid="uid://dgi65t2o88an1" path="res://assets/piece/lichess_pixel/wK.svg" id="2_3w8a3"]
+
+[node name="ChessKing" instance=ExtResource("1_srflh")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_3w8a3")

@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=3 uid="uid://c02l346qgrftm"]
+
+[ext_resource type="PackedScene" uid="uid://kowkmujedbxd" path="res://scenes/world/board/board.tscn" id="1_igt34"]
+[ext_resource type="PackedScene" uid="uid://c1l1juwifv33l" path="res://scenes/world/square/white_square.tscn" id="2_momc2"]
+[ext_resource type="PackedScene" uid="uid://bnlojit16fy7n" path="res://scenes/world/square/black_square.tscn" id="3_gusqr"]
+
+[node name="Board" instance=ExtResource("1_igt34")]
+board_dim_x = 4
+board_dim_y = 4
+
+[node name="Grid" parent="." index="0"]
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 96.0
+offset_bottom = 96.0
+columns = 4
+metadata/_edit_group_ = true
+
+[node name="WhiteSquare" parent="Grid" index="0" instance=ExtResource("2_momc2")]
+layout_mode = 2
+
+[node name="BlackSquare" parent="Grid" index="1" instance=ExtResource("3_gusqr")]
+layout_mode = 2
+
+[node name="WhiteSquare2" parent="Grid" index="2" instance=ExtResource("2_momc2")]
+layout_mode = 2
+
+[node name="BlackSquare2" parent="Grid" index="3" instance=ExtResource("3_gusqr")]
+layout_mode = 2
+
+[node name="BlackSquare6" parent="Grid" index="4" instance=ExtResource("3_gusqr")]
+layout_mode = 2
+
+[node name="WhiteSquare6" parent="Grid" index="5" instance=ExtResource("2_momc2")]
+layout_mode = 2
+
+[node name="BlackSquare3" parent="Grid" index="6" instance=ExtResource("3_gusqr")]
+layout_mode = 2
+
+[node name="WhiteSquare4" parent="Grid" index="7" instance=ExtResource("2_momc2")]
+layout_mode = 2
+
+[node name="WhiteSquare7" parent="Grid" index="8" instance=ExtResource("2_momc2")]
+layout_mode = 2
+
+[node name="BlackSquare4" parent="Grid" index="9" instance=ExtResource("3_gusqr")]
+layout_mode = 2
+
+[node name="WhiteSquare5" parent="Grid" index="10" instance=ExtResource("2_momc2")]
+layout_mode = 2
+
+[node name="BlackSquare5" parent="Grid" index="11" instance=ExtResource("3_gusqr")]
+layout_mode = 2
+
+[node name="BlackSquare7" parent="Grid" index="12" instance=ExtResource("3_gusqr")]
+layout_mode = 2
+
+[node name="WhiteSquare8" parent="Grid" index="13" instance=ExtResource("2_momc2")]
+layout_mode = 2
+
+[node name="BlackSquare8" parent="Grid" index="14" instance=ExtResource("3_gusqr")]
+layout_mode = 2
+
+[node name="WhiteSquare9" parent="Grid" index="15" instance=ExtResource("2_momc2")]
+layout_mode = 2

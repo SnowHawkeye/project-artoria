@@ -21,7 +21,8 @@ func _ready() -> void:
 			row.append(square_node)
 		board_array.append(row)
 	
-	# Make board using the provided array	
+	# Make board using the provided array
 	make_board(board_array)
+	center_board()
 	
 	

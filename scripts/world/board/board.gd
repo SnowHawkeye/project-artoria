@@ -15,7 +15,7 @@ func make_board(squares):
 	for x in squares:
 		for y in x:
 			grid.add_child(y)
-	center_board()
+
 	
 func center_board():
 	grid.position = size / 2  # Center grid in the parent
