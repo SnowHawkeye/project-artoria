@@ -5,5 +5,4 @@
 [node name="BlackSquare" instance=ExtResource("1_3qxiu")]
 
 [node name="ColorRect" parent="." index="0"]
-layout_mode = 0
 color = Color(0.709804, 0.533333, 0.388235, 1)

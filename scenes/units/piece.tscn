@@ -1,8 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://bug87wes4jax1"]
+[gd_scene load_steps=3 format=3 uid="uid://bug87wes4jax1"]
 
-[ext_resource type="Script" path="res://scripts/unit/piece.gd" id="1_es4t8"]
+[ext_resource type="Script" path="res://scripts/units/piece.gd" id="1_es4t8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qk5bh"]
+size = Vector2(32, 32)
 
 [node name="Piece" type="Node2D"]
 script = ExtResource("1_es4t8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_qk5bh")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

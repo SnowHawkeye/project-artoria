@@ -1,13 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://di27fwbie5kx1"]
+[gd_scene load_steps=3 format=3 uid="uid://di27fwbie5kx1"]
 
 [ext_resource type="Script" path="res://scripts/world/square/square.gd" id="1_t4o17"]
 
-[node name="Square" type="Control"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5nwkr"]
+size = Vector2(32, 32)
+
+[node name="Square" type="Control" groups=["droppable"]]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 32.0
+offset_bottom = 32.0
+mouse_filter = 2
 script = ExtResource("1_t4o17")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -18,3 +22,11 @@ offset_bottom = 32.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(1, 1, 1, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["droppable"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" groups=["droppable"]]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_5nwkr")
+
+[connection signal="resized" from="." to="." method="_on_resized"]

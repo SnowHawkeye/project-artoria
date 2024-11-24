@@ -1,3 +1,28 @@
-[gd_scene format=3 uid="uid://cvb0vdivsll5k"]
+[gd_scene load_steps=5 format=3 uid="uid://cvb0vdivsll5k"]
+
+[ext_resource type="PackedScene" uid="uid://c02l346qgrftm" path="res://scenes/world/board/debug_board.tscn" id="1_cu1rt"]
+[ext_resource type="PackedScene" uid="uid://dbcq2byl5bhoh" path="res://scenes/units/chess_king_piece.tscn" id="2_3hnrq"]
+[ext_resource type="PackedScene" uid="uid://bnlojit16fy7n" path="res://scenes/world/square/black_square.tscn" id="3_ewia1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7x323"]
+size = Vector2(236, 194)
 
 [node name="Main" type="Node"]
+
+[node name="DebugBoard" parent="." instance=ExtResource("1_cu1rt")]
+mouse_filter = 2
+
+[node name="BlackSquare" parent="." instance=ExtResource("3_ewia1")]
+offset_left = 196.0
+offset_top = 248.0
+offset_right = 228.0
+offset_bottom = 280.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(813, 402)
+shape = SubResource("RectangleShape2D_7x323")
+
+[node name="ChessKingPiece" parent="." instance=ExtResource("2_3hnrq")]
+position = Vector2(353, 270)

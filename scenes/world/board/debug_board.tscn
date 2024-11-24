@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c1l1juwifv33l" path="res://scenes/world/square/white_square.tscn" id="2_momc2"]
 [ext_resource type="PackedScene" uid="uid://bnlojit16fy7n" path="res://scenes/world/square/black_square.tscn" id="3_gusqr"]
 
-[node name="Board" instance=ExtResource("1_igt34")]
+[node name="DebugBoard" instance=ExtResource("1_igt34")]
 board_dim_x = 4
 board_dim_y = 4
 
@@ -14,7 +14,6 @@ offset_top = -32.0
 offset_right = 96.0
 offset_bottom = 96.0
 columns = 4
-metadata/_edit_group_ = true
 
 [node name="WhiteSquare" parent="Grid" index="0" instance=ExtResource("2_momc2")]
 layout_mode = 2
