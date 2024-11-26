@@ -1,21 +1,44 @@
 class_name Board
-extends Control
+extends Node2D
 
-@export var board_dim_x := 8
-@export var board_dim_y := 8
-@export var square_size := 32 # px
+var square_dimensions: Vector2 = Vector2(32,32)
+@export var square_size:int=32:
+	get:
+		return square_dimensions.x
+	set(value):
+		square_dimensions = Vector2(value, value)
 
-@onready var grid: GridContainer = $Grid
-
-func _ready() -> void:
-	grid.custom_minimum_size = Vector2(board_dim_x * square_size, board_dim_y * square_size)
-	grid.columns = board_dim_x
-
-func make_board(squares):
-	for x in squares:
-		for y in x:
-			grid.add_child(y)
-
+var squares: Array = []
 	
-func center_board():
-	grid.position = size / 2  # Center grid in the parent
+func make_board():
+	
+	# position reference is the top left corner of the board
+	var initial_position = global_position + square_dimensions/2 
+	var current_position = initial_position
+	
+	# first loop to add children to the tree
+	for x in range(squares.size()):
+		for y in range(squares[x].size()):
+			var square = squares[x][y]
+			add_child(square)
+			if Engine.is_editor_hint():
+				square.set_owner(self)
+	
+	# make sure textures are loaded
+	await get_tree().process_frame
+	# squares are assumed to all have the same dimensions
+	var square_sprite_size = squares[0][0].get_dimension()
+	
+	# place and setup squares
+	for x in range(squares.size()):
+		for y in range(squares[x].size()):
+			var square = squares[x][y]
+			
+			square.name = "("+ str(x) + "," + str(y)+ ")"
+			square.global_position = current_position
+			
+			square.scale = square_dimensions / square_sprite_size
+			current_position.x += square_dimensions.x
+		
+		current_position.x = initial_position.x # reset x for next row
+		current_position.y += square_size # increment y for next row

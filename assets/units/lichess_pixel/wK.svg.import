@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chudxkuflt4fs"
-path="res://.godot/imported/wQ.svg-1b0b59963e07a0e70e804261ea6ad2bf.ctex"
+uid="uid://dgi65t2o88an1"
+path="res://.godot/imported/wK.svg-1a1969ce3a36581e8ee916a0bbde75fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/piece/lichess_pixel/wQ.svg"
-dest_files=["res://.godot/imported/wQ.svg-1b0b59963e07a0e70e804261ea6ad2bf.ctex"]
+source_file="res://assets/units/lichess_pixel/wK.svg"
+dest_files=["res://.godot/imported/wK.svg-1a1969ce3a36581e8ee916a0bbde75fd.ctex"]
 
 [params]
 
