@@ -7,5 +7,7 @@
 
 [node name="CheckeredBoard" instance=ExtResource("1_g77dg")]
 script = ExtResource("2_xsvu8")
+board_dim_x = 5
+board_dim_y = 8
 square_type_1 = ExtResource("3_xsm13")
 square_type_2 = ExtResource("4_1ls0k")

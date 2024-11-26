@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5rhluya3uhwv"
-path="res://.godot/imported/wN.svg-753a85200bff1156246558c8daeebebc.ctex"
+uid="uid://r1l5surnxkld"
+path="res://.godot/imported/square.png-076ba1f2df2f7680d7b78cdc08246c7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/piece/lichess_pixel/wN.svg"
-dest_files=["res://.godot/imported/wN.svg-753a85200bff1156246558c8daeebebc.ctex"]
+source_file="res://assets/world/square.png"
+dest_files=["res://.godot/imported/square.png-076ba1f2df2f7680d7b78cdc08246c7c.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false
